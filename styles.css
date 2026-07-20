@@ -186,13 +186,13 @@ p {
   isolation: isolate;
 }
 
-.hero-video,
+.hero-bg,
 .hero-overlay {
   position: absolute;
   inset: 0;
 }
 
-.hero-video {
+.hero-bg {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -387,18 +387,7 @@ p {
   overflow: hidden;
   border-radius: var(--radius-lg);
   min-height: 290px;
-}
-
-.project-card:nth-child(1),
-.project-card:nth-child(5) {
-  grid-column: span 8;
-}
-
-.project-card:nth-child(2),
-.project-card:nth-child(3),
-.project-card:nth-child(4),
-.project-card:nth-child(6) {
-  grid-column: span 4;
+  grid-column: span 6;
 }
 
 .project-card img {
@@ -436,6 +425,53 @@ p {
 .project-card:hover img,
 .project-card:focus-within img {
   transform: scale(1.055);
+}
+
+.case-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.case-item {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  aspect-ratio: 3 / 4;
+}
+
+.case-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.case-item:hover img {
+  transform: scale(1.06);
+}
+
+.case-item figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fefcf9;
+  background: linear-gradient(180deg, rgba(24, 23, 21, 0) 0%, rgba(24, 23, 21, 0.78) 100%);
+}
+
+@media (max-width: 960px) {
+  .case-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .case-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .process-line {
@@ -638,15 +674,6 @@ p {
     grid-column: span 6;
   }
 
-  .project-card:nth-child(1),
-  .project-card:nth-child(2),
-  .project-card:nth-child(3),
-  .project-card:nth-child(4),
-  .project-card:nth-child(5),
-  .project-card:nth-child(6) {
-    grid-column: span 6;
-  }
-
   .trust-layout,
   .request-layout {
     grid-template-columns: 1fr;
@@ -700,12 +727,8 @@ p {
   }
 
   .service-card,
-  .project-card:nth-child(1),
-  .project-card:nth-child(2),
-  .project-card:nth-child(3),
-  .project-card:nth-child(4),
-  .project-card:nth-child(5),
-  .project-card:nth-child(6) {
+  .project-card,
+  .case-item {
     grid-column: span 12;
   }
 
@@ -720,4 +743,34 @@ p {
   .request-layout {
     padding: 26px;
   }
+}
+
+.floating-contact {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating-contact a {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: #fefcf9;
+  font-weight: 700;
+  font-size: 0.8rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.floating-contact a:hover {
+  transform: translateY(-3px);
+  background: var(--accent-dark);
 }

@@ -27,9 +27,10 @@
           "addressLocality": "Томск",
           "addressCountry": "RU"
         },
-        "telephone": "+7-900-000-00-00",
-        "url": "https://example.com",
-        "areaServed": "Томск"
+        "telephone": "+7-923-413-05-52",
+        "url": "https://hemispere.github.io/gsp-landing/",
+        "areaServed": "Томск",
+        "sameAs": ["https://wa.me/79234130552", "https://t.me/+79234130552"]
       }
     </script>
   </head>
@@ -44,6 +45,7 @@
         <nav class="main-nav" id="main-nav">
           <a href="#services">Что строим</a>
           <a href="#portfolio">Работы</a>
+          <a href="#case-study">Полный цикл</a>
           <a href="#process">Как работаем</a>
           <a href="#reviews">Отзывы</a>
           <a class="nav-cta" href="#request">Расчёт</a>
@@ -53,17 +55,7 @@
 
     <main id="top">
       <section class="hero" aria-label="Первый экран">
-        <video
-          class="hero-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          poster="/assets/hero-poster.jpg"
-        >
-          <!-- Замените /assets/hero-placeholder.mp4 на реальное видео объекта -->
-          <source src="/assets/hero-placeholder.mp4" type="video/mp4" />
-        </video>
+        <img class="hero-bg" src="assets/photos/hero-bg.jpg" alt="Дом в стиле А-фрейм, построенный СК ГСП" />
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container hero-content">
           <p class="hero-kicker">Строительная компания в Томске</p>
@@ -117,6 +109,10 @@
               <h3><img src="assets/icons/wand.svg" class="icon" alt="" aria-hidden="true"> Нестандартные проекты</h3>
               <p>Реализуем частные задачи, когда нужен индивидуальный сценарий строительства.</p>
             </article>
+            <article class="service-card animate-on-scroll delay-3">
+              <h3><img src="assets/icons/hammer.svg" class="icon" alt="" aria-hidden="true"> Ремонт и отделка</h3>
+              <p>Чистовая отделка и ремонт помещений — от черновой стадии до готового интерьера.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -128,55 +124,69 @@
             <p>Примеры реализованных проектов, где важны были детали, дисциплина и аккуратная реализация.</p>
           </div>
           <div class="portfolio-grid">
-            <!-- Замените заглушки /assets/project-*.jpg на реальные фотографии проектов -->
             <article class="project-card animate-on-scroll">
-              <img src="/assets/project-1.jpg" loading="lazy" alt="Строительство частного дома в Томске" />
+              <img src="assets/photos/project-house.jpg" loading="lazy" alt="Частный дом, построенный СК ГСП" />
               <div class="project-overlay">
-                <h3>Дом на южном склоне</h3>
+                <h3>Частный дом</h3>
                 <p>Дом</p>
-                <span>Чистая геометрия фасада и тёплый контур для сибирского климата.</span>
+                <span>Компактный жилой дом с аккуратной геометрией фасада.</span>
               </div>
             </article>
             <article class="project-card animate-on-scroll delay-1">
-              <img src="/assets/project-2.jpg" loading="lazy" alt="Коттедж в Томске, этап строительства" />
+              <img src="assets/photos/project-cottage-aframe.jpg" loading="lazy" alt="Дом в стиле А-фрейм" />
               <div class="project-overlay">
-                <h3>Коттедж у лесной зоны</h3>
-                <p>Коттедж</p>
-                <span>Сложный рельеф участка отработан без потери полезной площади.</span>
+                <h3>Дом в стиле А-фрейм</h3>
+                <p>Нестандартный проект</p>
+                <span>Индивидуальная форма кровли и панорамное остекление.</span>
               </div>
             </article>
             <article class="project-card animate-on-scroll delay-2">
-              <img src="/assets/project-3.jpg" loading="lazy" alt="Строительство бани под ключ в Томске" />
+              <img src="assets/photos/project-garage.jpg" loading="lazy" alt="Гараж с навесом при частном доме" />
               <div class="project-overlay">
-                <h3>Баня с террасой</h3>
-                <p>Баня</p>
-                <span>Компактный проект с удобной логикой помещений и вентиляцией.</span>
+                <h3>Гараж с навесом</h3>
+                <p>Гараж</p>
+                <span>Металлический каркас навеса и рациональная логистика участка.</span>
               </div>
             </article>
             <article class="project-card animate-on-scroll delay-3">
-              <img src="/assets/project-4.jpg" loading="lazy" alt="Деревянная беседка для участка в Томске" />
+              <img src="assets/photos/project-renovation.jpg" loading="lazy" alt="Готовый интерьер после ремонта и отделки" />
               <div class="project-overlay">
-                <h3>Садовая беседка</h3>
-                <p>Беседка</p>
-                <span>Легкая конструкция, собранная в общем стиле дома и участка.</span>
+                <h3>Ремонт и отделка</h3>
+                <p>Отделка под ключ</p>
+                <span>Чистовая отделка помещений — от чернового этапа до готового интерьера.</span>
               </div>
             </article>
-            <article class="project-card animate-on-scroll">
-              <img src="/assets/project-5.jpg" loading="lazy" alt="Гараж при частном доме в Томске" />
-              <div class="project-overlay">
-                <h3>Гараж с хозблоком</h3>
-                <p>Гараж</p>
-                <span>Рациональное пространство для хранения и обслуживания техники.</span>
-              </div>
-            </article>
-            <article class="project-card animate-on-scroll delay-1">
-              <img src="/assets/project-6.jpg" loading="lazy" alt="Пристройка к дому в Томске" />
-              <div class="project-overlay">
-                <h3>Тёплая пристройка</h3>
-                <p>Пристройка</p>
-                <span>Интеграция с существующим домом без визуального и конструктивного конфликта.</span>
-              </div>
-            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-study" id="case-study">
+        <div class="container">
+          <div class="section-head">
+            <h2>Полный цикл на одном объекте</h2>
+            <p>Один и тот же дом от заливки фундамента до готового интерьера — реальные фото с этапов работ.</p>
+          </div>
+          <div class="case-grid">
+            <figure class="case-item animate-on-scroll">
+              <img src="assets/photos/case-1-foundation.jpg" loading="lazy" alt="Земляные работы и заливка фундамента" />
+              <figcaption>Фундамент</figcaption>
+            </figure>
+            <figure class="case-item animate-on-scroll delay-1">
+              <img src="assets/photos/case-2-walls.jpg" loading="lazy" alt="Возведение стен" />
+              <figcaption>Стены</figcaption>
+            </figure>
+            <figure class="case-item animate-on-scroll delay-2">
+              <img src="assets/photos/case-3-brick.jpg" loading="lazy" alt="Подбор облицовочного кирпича" />
+              <figcaption>Фасад</figcaption>
+            </figure>
+            <figure class="case-item animate-on-scroll delay-3">
+              <img src="assets/photos/case-4-interior.jpg" loading="lazy" alt="Чистовая отделка интерьера" />
+              <figcaption>Отделка</figcaption>
+            </figure>
+            <figure class="case-item animate-on-scroll">
+              <img src="assets/photos/case-5-finished.jpg" loading="lazy" alt="Готовый дом" />
+              <figcaption>Результат</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -270,7 +280,7 @@
                 type="tel"
                 name="phone"
                 autocomplete="tel"
-                placeholder="+7 (900) 000-00-00"
+                placeholder="+7 (923) 000-00-00"
                 required
               />
             </label>
@@ -305,10 +315,16 @@
       <div class="container footer-inner">
         <p>СК ГСП</p>
         <p>Томск</p>
-        <a href="tel:+79000000000">+7 (900) 000-00-00</a>
-        <a href="mailto:info@gsp-tomsk.ru">info@gsp-tomsk.ru</a>
+        <a href="tel:+79234130552">+7 (923) 413-05-52</a>
+        <a href="https://wa.me/79234130552" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://t.me/+79234130552" target="_blank" rel="noopener">Telegram</a>
       </div>
     </footer>
+
+    <div class="floating-contact">
+      <a href="https://wa.me/79234130552" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">WA</a>
+      <a href="https://t.me/+79234130552" target="_blank" rel="noopener" aria-label="Написать в Telegram">TG</a>
+    </div>
 
     <script src="script.js"></script>
   </body>
